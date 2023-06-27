@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recap-deployment
+  labels:
+    app: recap-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recap-app
+  template:
+    metadata:
+      labels:
+        app: recap-app
+    spec:
+      containers:
+        - name: recap
+          image: mohammedaddoumi/recap-review
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://postgres-service:5432/postgres
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: postgres
