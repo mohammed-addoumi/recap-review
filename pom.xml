@@ -53,7 +53,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<finalName>recap-app7</finalName>
+					<finalName>recap-app8</finalName>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
